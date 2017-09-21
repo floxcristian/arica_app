@@ -1,0 +1,67 @@
+<!--<ion-menu [content]="content" (ionOpen)="menuOpened()" (ionClose)="menuClosed()">>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>-->
+
+<ion-menu [content]="content" (ionOpen)="menuOpened()" (ionClose)="menuClosed()" >
+  <ion-content>
+
+    <!--HEADER DEL MENU-->
+    <div class="menu-header">
+      <img src="assets/background3.jpg">
+      <div class="menu-header-content">
+      <ion-grid>
+        
+        <ion-row>
+          <ion-col col-4>
+            <div class="image-cropper">
+              <div class="rounded" [ngStyle]="{ 'background-image': 'url(' + profile_image +')' }"></div>
+            </div>
+          </ion-col>
+          <ion-col col-8 style="padding-top: 28px;">
+            <P><b>Cristian</b></P>
+            <p>fsfsd@ds.com</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    
+      
+        
+      </div>
+    </div>
+    <!--FIN DEL HEADER DEL MENU-->
+
+    <ion-list class="menu-list">
+      <button menuClose ion-item *ngFor="let page of pages" [class.activeHighLight]="checkActive(page)" (click)="openPage(page)">
+        <ion-icon class="menu-icon" color="purpl" name="{{page.icon}}" item-left></ion-icon>
+        <h3 class="item-menu">{{page.title}}</h3>
+        <!--{{page.title}}
+          <ion-badge color="danger" *ngIf="page?.title == 'Mensajes'">2</ion-badge>-->
+      </button>
+    </ion-list>
+
+    <ion-footer>
+    <button menuClose ion-item (click)="logout()" style="padding-bottom: 4px; padding-top: 3px;">
+      <ion-icon class="menu-icon" style="margin-top: 0px; margin-bottom: 0px; font-size: 30px;" color="purpl" name="ai-exit" item-left></ion-icon>
+      <h3 class="item-menu">Salir</h3>
+    </button>
+  </ion-footer>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

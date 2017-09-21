@@ -1,0 +1,46 @@
+page-geolocation {
+    
+    .home{
+        position: relative;
+
+        .bottom{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .request-controls{
+            
+        }
+
+        .popover {
+            width:94%;
+            background: #ec407a;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            padding: 4px 12px;
+     
+            
+        }
+
+        h4 {
+            color: #fce4ec;
+            text-transform: uppercase;
+            font-size: .7em;
+            letter-spacing: 1px;
+            margin:0;padding:0;
+        }
+
+         ion-col p {
+        color: #fff;
+        margin: 2px 0 0 0;
+    }
+       
+    }
+    
+    
+
+    
+}

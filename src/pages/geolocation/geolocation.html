@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Geolocalización</ion-title>
+    <ion-buttons end>
+      <button *ngIf="isTracking == 0" ion-button icon-only (click)="geolocateMe()">
+        <ion-icon name="locate"></ion-icon>
+      </button>
+      <button *ngIf="isTracking == 1" ion-button icon-only (click)="stopTracking()">
+        <ion-icon name="square"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="home">
+  <div #map id="map" style="height: 100%;"> 
+  </div>
+
+  <div class="bottom request-controls">
+    <ion-grid>
+      <ion-row >
+        <ion-col col-6>
+          <div class="popover">
+            <h4>Latitud:</h4> <p *ngIf="mylat">{{mylat}}</p> <p *ngIf="!mylat">--</p>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="popover">
+            <h4>Longitud:</h4> <p *ngIf="mylat">{{mylong}}</p> <p *ngIf="!mylat">--</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

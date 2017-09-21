@@ -1,0 +1,83 @@
+page-tourism {
+        
+    ion-header {
+        .btn-txt ion-icon {
+            margin-right: 7px;
+        }
+
+        .btn-txt {
+            background-color: #3F51B5;
+        }
+    }
+
+    .card-background-page {
+        ion-card {
+            position: relative;
+            margin: 0 !important;
+            width:100%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .place_image {
+            max-width:100%;
+            width: 800px;
+            margin: auto;
+        }
+
+        .place_image::after {
+            display:block;
+            position:relative;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0, #000 100%);
+            margin-top: -150px;
+            height: 150px;
+            width:100%;
+            opacity: .8;
+            content: '';
+        }
+
+        .card-title {
+            position:absolute;
+            bottom: 10%;
+            font-size: 1.5em;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .card-subtitle {
+            font-size: 1em;
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            color: #fff;
+            padding: 15px;
+        }
+
+        button {
+            position: absolute;
+            z-index: 5;
+            bottom: 10%;
+            right: 5%;
+        }
+
+        .tinted {
+            opacity: 0.8;
+        }
+
+        ion-row {
+            background: #263a5d !important;
+        }
+
+        ion-searchbar {
+            display:none;
+        }
+
+        .show-search {
+            display:block;
+        }
+    }
+}

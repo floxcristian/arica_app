@@ -1,0 +1,26 @@
+
+<ion-content [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" class="tint">
+  
+  
+
+  <ion-header>
+    <ion-navbar>
+    </ion-navbar>
+  </ion-header>
+   <h1 class="myfont">CUENTA</h1>
+   <div padding style="font-family: roboto; text-align: center; font-size: 16px; color: white;">
+       Escribe tu correo electrónico para reestablecer tu contraseña.
+   </div>
+
+  <div padding>
+     <form [formGroup]="resetPasswordForm" (submit)="resetPassword()" novalidate>
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="Correo Electrónico" [class.invalid]="!resetPasswordForm.controls.email.valid && resetPasswordForm.controls.email.dirty" placeholder="Correo Electrónico"></ion-input>
+    </ion-item>
+   
+    <button ion-button block type="submit" class="login-button">ENVIAR</button>
+      </form>
+  </div>
+  
+</ion-content>
+

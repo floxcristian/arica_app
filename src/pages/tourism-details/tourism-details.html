@@ -1,0 +1,71 @@
+<ion-header>
+  
+  <ion-navbar color="primary">
+    <div *ngIf="current_place">
+      <ion-title>{{current_place.name}}</ion-title>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="current_place">
+    <div class="place_image">
+      <img src="{{current_place.image}}" class="tinted">
+    </div>
+    <div id="popover">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <h4>Calificación</h4>
+            <p class="larger-res">4.2</p>
+          </ion-col>
+          <ion-col col-6>
+            <h4>Categoría</h4>
+            <p>Playas</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <h4>Horario</h4>
+            <p>Siempre Abierto</p>
+          </ion-col>
+          <ion-col col-6>
+            <h4>Precio</h4>
+            <p>Gratis</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+      <ion-card padding>
+        <h4>Información</h4>
+        <p>{{current_place.description}}</p>
+      </ion-card>
+
+      <div id="screenslider">
+        <h5>Imagenes</h5>
+      
+        <ion-scroll scrollX="true" class="item">
+          <ion-row [style.width]="current_place.screenshots.length+'00%'">
+            <ion-col *ngFor="let screenshot of current_place.screenshots">
+              <img src="{{screenshot.url}}">
+            </ion-col>
+          </ion-row>
+        </ion-scroll>
+
+      </div>
+
+      <h5>Videos</h5>
+
+        <ion-list>
+          <button ion-item *ngFor="let video of current_place.videos" (click)="playVideo(video.video_id)">
+            <ion-icon name="play" small item-start color="primary" class="itemfix"></ion-icon>{{ video.name }}
+          </button>
+        </ion-list>
+      
+
+  </div>
+</ion-content>

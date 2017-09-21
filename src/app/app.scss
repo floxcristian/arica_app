@@ -1,0 +1,184 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+    page-home, page-tourism, page-tourism-details, page-tourism-categories{
+        ion-content {
+            background: #ECECEC !important;
+            font-family: 'Raleway';
+        }
+    }
+
+    .menu-header {
+  position: relative;
+  margin-bottom: 10px;
+  img {
+    width:   100%;
+    display: block;
+  }
+  &-content {
+    left:          0;
+    right:         0;
+    bottom:        0;
+    z-index:       2;
+    padding:       .2rem 0rem;
+    position:      absolute;
+    line-height:   1;
+    h2, p {
+      margin:        0;
+      overflow:      hidden;
+      white-space:   nowrap;
+      text-overflow: ellipsis;
+    }
+    h2 {
+      color:     white;
+      font-size: 2rem;
+    }
+    p {
+      color:     rgba(white, .9);
+      font-size: 1.8rem;
+    }
+  }
+  &:before {
+    left:       0;
+    right:      0;
+    bottom:     0;
+    height:     75%;
+    
+    content:    '';
+    position:   absolute;
+    background: linear-gradient(to top, rgba(black, .5) 0%,rgba(black, 0) 100%);
+    border-bottom: 1px solid #36478D;
+   
+  }
+
+  ion-grid{
+    padding: 10px 0px;
+  }
+}
+
+.footer-md::before {
+    background-image: none !important; //SACA IMAGEN TIPO <HR> QUE SE GENERA SOBRE EL FOOTER
+}
+
+.menu-icon{
+    //transform: translateX(15px, 50%) !important;
+    position: relative !important;
+    left: 10px !important;
+    margin-top: 20px;
+    margin-bottom: 11px;
+    width: 28px !important;
+}
+
+.item-md{
+    padding-left: 25px;
+    
+}
+
+.item-menu{
+    //color: #96A3E8;
+    font-weight: bold !important;
+    position: relative !important;
+    padding: 0px !important;
+    margin-left: 0px;
+    left: 2px !important;
+    //font-family: "roboto" !important;
+    font-size: 1.6rem !important;
+    color: #777777; 
+    margin-top: 14px !important;
+    margin-bottom: 12px !important;
+    //transform: translate(25px, 50%);
+
+    ion-label{
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+    }
+    .label-md, .label {
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
+    }
+}
+
+ion-label{
+      margin-top: 0.4rem !important;
+      margin-bottom: 0.4rem !important;
+}
+
+
+.item-inner{
+    border: 0px !important;
+}
+
+.activeHighLight{
+    //background-color: #F3F4F9;
+    //background-color: #E2E3E3;    
+    background-color: #EBEBEB; 
+    border-left: 5px solid #36478D;
+    padding-left: 20px;
+
+    .item-menu{
+        //color: #96A3E8;
+        color: #36478D; 
+    }
+
+    ion-icon{
+        color: #36478D; 
+    }
+
+    
+}
+
+.hide-card {
+  -webkit-box-shadow: none!important;
+}
+
+.image-cropper {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.rounded {
+    display: block;
+    margin: 0 auto;
+    height: 70px;
+    width: 70px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-position: 0% 25%;
+    background-size:cover;
+    border: solid 2px #36478D;
+}   
+
+ion-menu{
+    .scroll-content {
+    overflow: hidden;
+  }
+
+.list-ios>.item-block:first-child {
+    border-top: none;
+}
+
+.list-ios>.item-block:last-child {
+    border-bottom: none;
+}
+
+}

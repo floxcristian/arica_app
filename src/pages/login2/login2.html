@@ -1,0 +1,40 @@
+<ion-slides pager="false" autoplay="5000" loop="true" speed="1500" effect="fade">
+    <ion-slide class="slide-background swiper-no-swiping tint" *ngFor="let background of backgrounds" [ngStyle]="{'background-image': 'url(' + background +')'}">
+    </ion-slide>
+  </ion-slides>
+
+
+<ion-content padding class="transparent-header" scroll="false">
+  
+  <ion-header>
+    <ion-navbar>
+    </ion-navbar>
+  </ion-header>
+  
+  <h1 class="myfont">ARICA ACTIVA!</h1>
+  <div padding>
+    <form [formGroup]="loginForm" (submit)="login()" novalidate>
+      <ion-item>
+        <ion-input type="email" formControlName="email" placeholder="Correo Electrónico" [class.invalid]="!loginForm.controls.email.valid &&loginForm.controls.email.dirty" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="password" placeholder="Contraseña" [class.invalid]="!loginForm.controls.password.valid &&loginForm.controls.password.dirty"></ion-input>
+      </ion-item>
+      <button ion-button block type="submit" class="login-button m">INGRESAR</button>
+      
+    </form>
+    <button ion-button block outline (click)="createAccount()" color="light" class="login-button">CREAR CUENTA</button>
+  </div>
+
+  <!--<div class="strike">
+    <span>OR</span>
+  </div>
+  <button ion-button block clear color="light" class="login-button"><ion-icon name="logo-facebook"></ion-icon> Ingresar con Facebook</button>-->
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)="forgot()">
+      <span><strong>¿OLVIDO SU CONTRASEÑA?</strong></span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

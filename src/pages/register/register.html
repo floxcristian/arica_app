@@ -1,0 +1,36 @@
+
+<ion-content [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" class="tint">
+  
+  
+
+  <ion-header>
+    <ion-navbar>
+    </ion-navbar>
+  </ion-header>
+  <h1 class="myfont">REGISTRO</h1>
+  <div padding>
+    <form [formGroup]="registerForm" (submit)="registerUser()" novalidate>
+    <ion-item>
+      <ion-input type="text" formControlName="name" placeholder="Nombre" [class.invalid]="!registerForm.controls.name.valid && registerForm.controls.name.dirty"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" formControlName="surname1" placeholder="Apellido Paterno" [class.invalid]="!registerForm.controls.surname1.valid && registerForm.controls.surname1.dirty"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" formControlName="surname2" placeholder="Apellido Materno" [class.invalid]="!registerForm.controls.surname2.valid && registerForm.controls.surname2.dirty"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" formControlName="email" placeholder="Correo Electrónico" [class.invalid]="!registerForm.controls.email.valid && registerForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" formControlName="password" placeholder="Contraseña" [class.invalid]="!registerForm.controls.password.valid && registerForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <!--<ion-item>
+      <ion-input type="password" placeholder="Repita la Contraseña"></ion-input>
+    </ion-item>-->
+    <button ion-button block  type="submit" class="login-button">CREAR CUENTA</button>
+     </form>
+  </div>
+  
+</ion-content>
+
